@@ -3,7 +3,6 @@
 <h2>here there are some tips</h2>
 
 <h3>Formatting letter in printf</h3>
-
     <ul>
         <li>int -> d</li>
         <li>float -> .(number of digits) f uo to 6-7 digits</li>
