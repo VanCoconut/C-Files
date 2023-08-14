@@ -28,5 +28,6 @@
         <li>char char is a single character</li>
         <li>char string[] is a string</li>
         <li>char string[n][m] is an array of n string containing max m characther each</li>
+        <li>I wrote a strange algorithm for sorting in "BubleSort.c" i don't get why it works</li>
     </ul>
 
