@@ -32,9 +32,13 @@ int main()
 
         printf("\nGuess: ");
         scanf("%c", &guess);
-        //printf("Guess is %c", guess);
-        scanf("%c");
-       
+        /* 
+            clear \n from imput buffer, so in the next iteration scan
+            will work fine instead of skipping, DO REMEBER THE *
+        */
+         scanf("%*c");
+        printf("Guess is %c", guess);
+
         guess = toupper(guess);
 
         if (guess == answers[i])
