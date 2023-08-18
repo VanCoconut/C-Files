@@ -8,6 +8,8 @@ char board[3][3];
 const char PLAYER = 'X';
 const char COMPUTER = 'O';
 
+void loadResults();
+void saveResults();
 void resetBoard();
 void printBoard();
 int checkFreeSpaces();
@@ -206,4 +208,31 @@ void printWinner(char winner)
     {
         printf("Draw\n");
     }
+}
+void loadResults()
+{
+    FILE *pF = fopen("C:\\Users\\Vincenzo Catalano\\Git\\C-Files\\saves.txt", "r");
+
+    char buffer[255];
+
+    if (pF == NULL)
+    {
+        printf("no such file");
+    }
+    else
+    {
+        while (fgets(buffer, 255, pF) != NULL)
+        {
+            printf("%s", buffer);
+        }
+    }
+    fclose(pF);
+}
+void saveResults()
+{
+     FILE *pF = fopen("C:\\Users\\Vincenzo Catalano\\Git\\C-Files\\saves.txt", "a");
+
+   fprintf(pF, "Spongebob Squarepants");
+
+   fclose(pF);
 }
