@@ -1,4 +1,4 @@
-<h1>Branches names link to some dummy projects just for learning C</h1> 
+<h1>Branch names link to some dummy projects just for learning C</h1> 
 
 <h2>here there are some tips</h2>
 
