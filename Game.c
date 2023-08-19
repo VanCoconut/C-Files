@@ -5,6 +5,8 @@
 #include <time.h>
 
 char board[3][3];
+int cPoints = 0;
+int pPoints = 0;
 const char PLAYER = 'X';
 const char COMPUTER = 'O';
 
@@ -17,6 +19,7 @@ void playerMove();
 void computerMove();
 char checkWinner();
 void printWinner(char);
+void displayResults();
 
 int main()
 {
@@ -29,6 +32,8 @@ int main()
         winner = ' ';
 
         printf("\nLet's play\n");
+        loadResults();
+        displayResults();
         resetBoard();
 
         while (winner = ' ' && checkFreeSpaces != 0)
@@ -52,7 +57,7 @@ int main()
 
         printBoard();
         printWinner(winner);
-
+        saveResults();
         printf("\nWould you like to play again? (Y/N): ");
         // non capisco perchè bisogna farlo due volte o non funziona
         scanf("%c", &response);
@@ -198,10 +203,12 @@ void printWinner(char winner)
 
     if (winner == PLAYER)
     {
+        pPoints++;
         printf("You win!\n");
     }
     else if (winner == COMPUTER)
     {
+        cPoints++;
         printf("You lose, Computer win!\n");
     }
     else
@@ -213,26 +220,35 @@ void loadResults()
 {
     FILE *pF = fopen("C:\\Users\\Vincenzo Catalano\\Git\\C-Files\\saves.txt", "r");
 
-    char buffer[255];
-
     if (pF == NULL)
     {
-        printf("no such file");
+        puts("no such file to load");
     }
     else
     {
-        while (fgets(buffer, 255, pF) != NULL)
-        {
-            printf("%s", buffer);
-        }
+        fseek(pF, 10, SEEK_SET); // set file pointer to 2nd position (0-indexed)
+        char part[2] = {0};      // array for 9 characters plus terminating 0
+        fread(part, 1, 1, pF);   // read 9 members of size 1 (characters) from f into part
+        pPoints = atoi(part);
+        fseek(pF, 23, SEEK_SET); // set file pointer to 2nd position (0-indexed)
+        char part1[2] = {0};     // array for 9 characters plus terminating 0
+        fread(part1, 1, 1, pF);  // read 1 members of size 1 (characters) from pF into part
+        cPoints = atoi(part1);
     }
     fclose(pF);
 }
 void saveResults()
 {
-     FILE *pF = fopen("C:\\Users\\Vincenzo Catalano\\Git\\C-Files\\saves.txt", "a");
+    FILE *pF = fopen("C:\\Users\\Vincenzo Catalano\\Git\\C-Files\\saves.txt", "w");
 
-   fprintf(pF, "Spongebob Squarepants");
+    fprintf(pF, "P POINTS: %d\n", pPoints);
+    fprintf(pF, "C POINTS: %d\n", cPoints);
 
-   fclose(pF);
+    fclose(pF);
+}
+
+void displayResults()
+{
+    printf("PLAYER POINTS: %d\n", pPoints);
+    printf("COMPUTER POINTS: %d\n", cPoints);
 }
