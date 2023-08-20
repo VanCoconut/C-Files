@@ -1,12 +1,17 @@
 #include <stdio.h>
 
+
+int x=0;
+
 void piuUnoP(int *);
 void piuUno(int );
-int x=7;
+void piuUnoPDueValori(int *,int *);
+int piuUnoDueValori(int ,int);
+void piuUnoGlobal();
+
 int main()
 {
-    int *y;
-    *y=5;
+    int y=5;
 
  
     int a = 1;
@@ -22,9 +27,9 @@ int main()
     piuUno(y);
     printf("y = %d", *y); */
 
-    printf("x = %d", x);
-    piuUnoP(&x);
-    printf("x = %d", x);
+    printf("x = %d\t y = %d", x,y);
+    piuUnoPDueValori(&x,&y);
+    printf("x = %d\t y= %d", x,y);
 
     return 0;
 }
@@ -36,5 +41,20 @@ void piuUnoP(int *n)
 
 void piuUno(int n)
 {
-    n++;
+    n++;//non ha effetti poiche alla funzione viene passata solo una copia 
+}
+
+void piuUnoGlobal()
+{
+    x++;
+}
+
+void piuUnoPDueValori(int *a,int *b){
+    *a=*a+1;
+    *b=*b+1;
+
+}
+int piuUnoDueValori(int a,int b ){
+
+return a++,b++;//non funziona poichè non ritorna il secondo valore
 }
