@@ -17,7 +17,7 @@ int main()
     return 0;
 }
 
-//usaimo un puntatore ad una funzione come argomento per poterla intercambiare facilmente (polimorfismo) 
+// usaimo un puntatore ad una funzione come argomento per poterla intercambiare facilmente (polimorfismo)
 void bubleSort(int a[], int size, int (*compare)(int x, int y))
 {
     void swap(int, int);
@@ -32,7 +32,7 @@ void bubleSort(int a[], int size, int (*compare)(int x, int y))
             if ((*compare)(a[j], a[j + 1]))
             {
                 swapP(&a[j], &a[j + 1]);
-            //printf("a[j] = %d, a[j+1] = %d\n",a[j],a[j+1]);
+                // printf("a[j] = %d, a[j+1] = %d\n",a[j],a[j+1]);
             }
         }
     }
@@ -50,20 +50,20 @@ int descending(int a, int b)
     return b > a;
 }
 
-//se non si usano i puntatori la funzione cambia i valori solo al suo interno e non nel ciclo for di buble
+// se non si usano i puntatori la funzione cambia i valori solo al suo interno e non nel ciclo for di buble
 void swapP(int *a, int *b)
 {
     int hold = *a;
     *a = *b;
     *b = hold;
-    //printf("a = %d, b = %d\n",*a,*b);
+    // printf("a = %d, b = %d\n",*a,*b);
 }
 
-//se non si usano i puntatori la funzione cambia i valori solo al suo interno e non nel ciclo for di buble
+// se non si usano i puntatori la funzione cambia i valori solo al suo interno e non nel ciclo for di buble
 void swap(int a, int b)
 {
     int hold = a;
     a = b;
     b = hold;
-    printf("a = %d, b = %d\n",a,b);
+    printf("a = %d, b = %d\n", a, b);
 }

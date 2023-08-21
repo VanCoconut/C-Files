@@ -15,7 +15,7 @@ int main()
     scanf("%d", &choice);
     printf("You selected : %d\n", n);
 
-    //instead of using any costruct like switch or if/else
+    // instead of using any costruct like switch or if/else
     (*f[choice - 1])(&n);
 
     printf("You got : %d", n);

@@ -12,27 +12,27 @@ void printArray(int *, int size);
 int main()
 {
     int y = 5;
-
     int a = 1;
     int *b = &a;
     int c = 2;
     *b = 3;
-    /*
-        printf("Valore di a: %d\n",a);
-        printf("Valore di b: %d\n",*b);
-        printf("l'indirizzo di memoria di b: %d\n",&b);
-        printf("l'indirizzo di memoria di a: %d\n",&a);
-    */
-    /*
-        printf("y = %d", *y);
-        piuUno(y);
-        printf("y = %d", *y); */
 
-    /*
-        printf("x = %d\t y = %d", x,y);
-        piuUnoPDueValori(&x,&y);
-        printf("x = %d\t y= %d", x,y);
-   */
+    printf("Valore di a: %d\n", a);
+    printf("Valore di b: %d\n", *b);
+    printf("l'indirizzo di memoria di b: %d\n", &b);
+    printf("l'indirizzo di memoria di a: %d\n", &a);
+
+    printf("y = %d\n", y);
+    piuUno(y);
+    printf("y = %d\n", y);
+
+    printf("y = %d\n", y);
+    piuUnoP(&y);
+    printf("y = %d\n", y);
+
+    printf("x = %d\t y = %d\n", x, y);
+    piuUnoPDueValori(&x, &y);
+    printf("x = %d\t y= %d\n", x, y);
 }
 
 void piuUnoP(int *n)
