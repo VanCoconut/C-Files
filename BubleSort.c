@@ -17,6 +17,7 @@ int main()
     return 0;
 }
 
+//usaimo un puntatore ad una funzione come argomento per poterla intercambiare facilmente (polimorfismo) 
 void bubleSort(int a[], int size, int (*compare)(int x, int y))
 {
     void swap(int, int);

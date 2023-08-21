@@ -19,13 +19,32 @@
         <li>double -> lf</li>
         <li>min field width -> %(num)</li>
         <li>left alling -> %-</li>
+        <li>*p for printing a pointer value</li>
+    </ul>
+
+<h3>pointers</h3>
+    <ul>
+        <li>int *p -> pointer</li>
+        <li>*p = 5 -> assigning a value to the pointer</li>
+        <li>p = &a -> assigning a memery reference to the pointer</li>
+        <li>very useful for strings (char array)</li>
+        <li>very useful for strings (char array)</li>
+        <li>very useful for modifing values using a custome function in loops, otherwise values are passed by value copy and not by memory reference, see BubleSort.c</li>
+        <li>const char *b -> a pointer that points to a const, so it can point to every char but it cannot modify them</li>
+        <li>const char * const b -> a const pointer that points to a const, so it'a a read-only object, you can change neither what pointer points or the value to whom it is pointing</li>
+        <li>int * compare(int,int) -> function that returs a pointer to int</li>
+        <li>int (*compare)(int,int) -> compare is a pointer to a function</li>
+        <li>an array of string is just an array of pointers, where each pointer points to the first char of each string
+        so char *cars={"Ferrari","Lamborghini"} is the same as char cars[2][25]={"Ferrari","Lamborghini"}</li>
+        <li>int (*compare)(int,int) -> compare is a pointer to a function</li>
+       
     </ul>
 
 
 <h3>Other stuff</h3>
     <ul>
         <li>Strange behivour using arrays, see "ArraysInt.c" for further evidence</li>
-        <li>char char is a single character</li>
+        <li>char c is a single character</li>
         <li>char string[] is a string</li>
         <li>char string[n][m] is an array of n string containing max m characther each</li>
         <li>I wrote a strange algorithm for sorting in "BubleSort.c" i don't get why it works</li>
