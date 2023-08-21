@@ -1,15 +1,17 @@
 #include <stdio.h>
 #include <ctype.h>
+#include <stdlib.h>
+#include <string.h>
 
 void copy(char *, const char *);
 void copy2(char *const, const char *const);
 void maiusc(char *);
 
-
 int main()
 {
     char a[10];
-    char b[] = "ciao";
+    char b[50] = "ciao";
+    printf("%s", b);
     copy2(a, b);
     printf("a = %s\n", a);
     maiusc(a);
@@ -37,8 +39,8 @@ void copy2(char *const a, const char *const b)
 
 void maiusc(char *p)
 {
-    for (; *p!='\0'; p++)
+    for (; *p != '\0'; p++)
     {
-        *p=toupper(*p);
+        *p = toupper(*p);
     }
 }
