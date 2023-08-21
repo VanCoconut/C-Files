@@ -17,9 +17,7 @@ int main(){
     printf("%c\n",x);
     printf("%c\n",y);
 
-/*
-        If you are using just a char or other type but arrays, you can use a temporary variable to store one value    
-    */
+
     char water[] ="water";
     char lemonade[] = "lemonade";
     char tempo[15];
