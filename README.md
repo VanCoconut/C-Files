@@ -36,8 +36,7 @@
         <li>int (*compare)(int,int) -> compare is a pointer to a function</li>
         <li>an array of string is just an array of pointers, where each pointer points to the first char of each string
         so char *cars={"Ferrari","Lamborghini"} is the same as char cars[2][25]={"Ferrari","Lamborghini"}</li>
-        <li>int (*compare)(int,int) -> compare is a pointer to a function</li>
-       
+        <li>int (*compare)(int,int) -> compare is a pointer to a function</li>  
     </ul>
 
 
