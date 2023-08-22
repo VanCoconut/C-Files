@@ -39,7 +39,7 @@
         <li>int (*compare)(int,int) -> "compare" is a pointer to a function</li>  
     </ul>
 
-<h3>Strings manipulation</h3>
+<h3>String manipulations</h3>
     <ul>
         <li>strcmp e strncmp return 0 if the first string is equal to the second one, -1 if is shorter, 1 if is longer</li>
         <li>you can directly manipulate bytes using memcpy,memmove,memcp,memchr,memset</li>
