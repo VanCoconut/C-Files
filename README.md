@@ -33,12 +33,17 @@
         <li>const char *b -> a pointer that points to a const, so it can point to every char but it cannot modify them</li>
         <li>const char * const b -> a const pointer that points to a const, so it'a a read-only object, you can change neither what pointer points or the value to whom it is pointing</li>
         <li>int * compare(int,int) -> function that returs a pointer to int</li>
-        <li>int (*compare)(int,int) -> compare is a pointer to a function</li>
+        <li>int (*compare)(int,int) -> "compare" is a pointer to a function</li>
         <li>an array of string is just an array of pointers, where each pointer points to the first char of each string
         so char *cars={"Ferrari","Lamborghini"} is the same as char cars[2][25]={"Ferrari","Lamborghini"}</li>
-        <li>int (*compare)(int,int) -> compare is a pointer to a function</li>  
+        <li>int (*compare)(int,int) -> "compare" is a pointer to a function</li>  
     </ul>
 
+<h3>Strings manipulation</h3>
+    <ul>
+        <li>strcmp e strncmp return 0 if the first string is equal to the second one, -1 if is shorter, 1 if is longer</li>
+        <li>you can directly manipulate bytes using memcpy,memmove,memcp,memchr,memset</li>
+    </ul>
 
 <h3>Other stuff</h3>
     <ul>
