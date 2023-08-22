@@ -13,14 +13,18 @@ int main()
     char b[50] = "ciao";
     char s1[20] = " ";
     char s2[] = "come stai";
-    // strcat(s1, s2);
-    //  printf("%s",s1);
-    // strcat(b, " ");
+    strcat(s1, s2);
+    printf("%s", s1);
+    strcat(b, " ");
     char *d;
-    addSpaceBeforAndAfter(b, s2);
-    // customConcat(b, s2);
-    //  strcat(b, s1);
-    printf("%sattaccato", b);
+    addSpaceBeforAndAfter(d, s2);
+    customConcat(b, s2);
+    strcat(b, s1);
+    printf("%nno_space", d);
+
+    //add only 5 character(spaces included) to b from d
+    strncat(b, d, 5);
+    printf("%s", b);
     return 0;
 }
 
