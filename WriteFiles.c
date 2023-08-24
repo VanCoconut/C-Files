@@ -5,7 +5,7 @@ int main()
    // WRITE/APPEND A FILE "w" to overwrite and "a" append use only absolutre path
    FILE *pF = fopen("C:\\Users\\Vincenzo Catalano\\Git\\C-Files\\test.txt", "a");
 
-   fprintf(pF, "Spongebob Squarepants");
+   fprintf(pF,"%s", "Spongebob Squarepants");
 
    fclose(pF);
    
