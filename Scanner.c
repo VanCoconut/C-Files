@@ -17,8 +17,11 @@ int main()
   const char *cosa;
   const char *scarto;
   //senza lo scarto non si possono immagazzinare 2 stringhe diverse se si inserisce una prima strigna più lunga di 2
-  scanf("%2s%s%2s",name,scarto,cosa); 
-  printf("nome = %s ,scarto = %s cosa = %s ",name,scarto,cosa);
+  //scanf("%2s%s%2s",name,scarto,cosa); 
+  //printf("nome = %s ,scarto = %s cosa = %s ",name,scarto,cosa);
+  //in questo caso essendo 20>"name" viene consideratp lo spazio di separazione
+  scanf("%20s%20s",name,cosa); 
+  printf("nome = %s,scarto = %s, cosa = %s ",name,scarto,cosa);
   //scanf("%d %d",&x,&y);
   //printf("x = %d y = %d", x, y);
   //  printf("How old are you?\n");
