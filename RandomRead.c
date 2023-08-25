@@ -20,7 +20,7 @@ int main()
     else
     {
 
-        printf("%-6s%-16s%-11s%10s\n", "Acct", "Last Name", "First Name", "Balance");
+        printf("%-6s%-16s%-11s%10s\n", "AccN", "Last Name", "First Name", "Balance");
 
         while (!feof(pF))
         {

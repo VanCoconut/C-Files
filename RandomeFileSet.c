@@ -20,7 +20,7 @@ int main(){
     {
         ClientData blankClient={0,"","",0.0};
 
-        for (size_t i = 1; i < 101; i++)
+        for (size_t i = 0; i < 100; i++) // if doesn't work try i=1 and i<101
         {
             fwrite(&blankClient,sizeof(ClientData),1,pF);
         }
