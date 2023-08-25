@@ -32,18 +32,18 @@ int main()
 
             // if fscanf can't properly read the input it returns the Eof and so it will skip the iteration
             // it should be improved with error input controls DONE 25/08
-            
-             int r = fscanf(stdin, "%14s%9s%lf", client.lastName, client.firstName, &client.balance);
 
-            //printf("r= %d\n",r);
+            int r = fscanf(stdin, "%14s%9s%lf", client.lastName, client.firstName, &client.balance);
 
-            while (r!=3)
+            // printf("r= %d\n",r);
+
+            while (r != 3)
             {
                 puts("Error, please enter last name, first name, balance");
                 r = fscanf(stdin, "%14s%9s%lf", client.lastName, client.firstName, &client.balance);
-                //printf("r= %d\n",r);
-            } 
-            
+                // printf("r= %d\n",r);
+            }
+
             /* prova inutile per evitare overflow RISOLTO 36-45
              fscanf(stdin, "%14s", client.lastName );
              scanf("%s");
@@ -56,19 +56,19 @@ int main()
              //scanf("%14s%9s%lf", client.lastName, client.firstName, &client.balance);
             */
 
-           if (fseek(pF, (client.accountN - 1) * sizeof(ClientData), SEEK_SET)!=0)
-           {
-            puts("Error finding the position");
-           }
+            if (fseek(pF, (client.accountN - 1) * sizeof(ClientData), SEEK_SET) != 0)
+            {
+                puts("Error finding the position");
+            }
 
-           if ( fwrite(&client, sizeof(ClientData), 1, pF)!=1)
-           {
-            puts("Error writing the data");
-           }
-           
+            if (fwrite(&client, sizeof(ClientData), 1, pF) != 1)
+            {
+                puts("Error writing the data");
+            }
+
             // without error controls
-            //fseek(pF, (client.accountN - 1) * sizeof(ClientData), SEEK_SET);  
-            //fwrite(&client, sizeof(ClientData), 1, pF);
+            // fseek(pF, (client.accountN - 1) * sizeof(ClientData), SEEK_SET);
+            // fwrite(&client, sizeof(ClientData), 1, pF);
 
             puts("Enteran account number (1-100) or 0 to close");
             scanf("%d", &client.accountN);
