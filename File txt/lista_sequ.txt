@@ -1,0 +1,4 @@
+1  Caio  89.00
+2  Sempronio  63.00
+3  Cesare  41.00
+4  Agrippa  20.00
