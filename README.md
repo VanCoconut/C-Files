@@ -1,6 +1,6 @@
 <h1>Branch names link to some dummy projects just for learning C</h1> 
 
-<h2>here there are some tips</h2>
+<h2>Here there are some tips</h2>
 
 <h3>Formatting letter in printf</h3>
     <ul>
