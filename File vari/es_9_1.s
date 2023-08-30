@@ -1,0 +1,6 @@
+; numero matricola #129e
+
+MOLTIPLICAZIONE
+MUL R4, R1, #129E
+MOV R0, R4
+MOV PC, LR

@@ -1,0 +1,4 @@
+
+AZZERABIT
+LSL R0, R1, #4
+MOV PC, LR
