@@ -14,13 +14,13 @@ int main()
     char s1[20] = " ";
     char s2[] = "come stai";
     strcat(s1, s2);
-    printf("%s", s1);
+   // printf("%s", s1);
     strcat(b, " ");
     char *d;
     addSpaceBeforAndAfter(d, s2);
     customConcat(b, s2);
     strcat(b, s1);
-    printf("%nno_space", d);
+    printf("\n%sno_space\n", d);
 
     //add only 5 character(spaces included) to b from d
     strncat(b, d, 5);

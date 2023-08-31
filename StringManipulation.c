@@ -8,8 +8,8 @@ int main()
 
     char a[] = "ciao come stai";
     char b[] = "lumone";
-    char *c = strchr(a, 'a');
     // c is a pointer to a, if found, and store the remaing part of the string
+    char *c = strchr(a, 'a');    
     printf("%s\n", c);
 
     // similar function but this time the second argument is a string
