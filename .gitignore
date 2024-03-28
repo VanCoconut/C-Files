@@ -13,3 +13,5 @@
 
 #Compiled files
 *.exe
+
+.idea
