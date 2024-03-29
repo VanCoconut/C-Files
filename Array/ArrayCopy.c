@@ -14,7 +14,7 @@ int main()
 
     for (size_t i = 0; i < 3; i++)
     {
-        printf("%d\t", a1[i]);
+        printf("%d\t", a3[i]);
     }
 
     return 0;
